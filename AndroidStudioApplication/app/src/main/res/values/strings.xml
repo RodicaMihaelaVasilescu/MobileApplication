@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">RM Studio</string>
+    <string name="app_name">Mobile app</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Name</string>
-    <string name="nav_header_subtitle">account@mail.com</string>
+    <string name="nav_header_title">Rodica Mihaela</string>
+    <string name="nav_header_subtitle">Student at ACE UCV</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
