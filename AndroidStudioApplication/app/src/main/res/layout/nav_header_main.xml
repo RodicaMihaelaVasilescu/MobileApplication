@@ -7,37 +7,38 @@
     android:gravity="bottom"
     android:orientation="horizontal"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="4.5mm"
+    android:paddingTop="30dp"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/double_general_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="8mm"
-        android:layout_height="8mm"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         app:srcCompat="@drawable/profile_picture2" />
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:paddingLeft="1mm"
-        android:layout_height="8mm"
-        android:paddingTop="@dimen/nav_header_vertical_spacing">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/nav_header_title"
-        android:textSize="2mm"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="1.5mm"
-        android:text="@string/nav_header_subtitle" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/general_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nav_header_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nav_header_subtitle"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
     </LinearLayout>
 
 </LinearLayout>

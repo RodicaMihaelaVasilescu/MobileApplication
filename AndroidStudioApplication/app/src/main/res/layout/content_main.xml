@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/homepage_color"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -14,192 +14,155 @@
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="0dp"
         android:isScrollContainer="true"
         android:orientation="vertical"
         android:paddingBottom="55dp"
         android:scrollbarAlwaysDrawVerticalTrack="true">
 
         <ScrollView
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
-                <!-- Post-->
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/fab_margin">
 
-                    <EditText
-                        android:id="@+id/name"
-                        android:layout_width="230dp"
-                        android:layout_height="40dp"
-                        android:focusable="false"
-                        android:hint="Share a photo..."
-                        android:maxHeight="40dp"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="0dp"
-                        android:textSize="12dp" />
+                <EditText
+                    android:id="@+id/share_a_photo..."
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/general_margin"
+                    android:layout_marginRight="@dimen/general_margin"
+                    android:drawableRight="@drawable/camera"
+                    android:focusable="false"
+                    android:hint="Share a photo..." />
 
-                    <ImageView
-                        android:id="@+id/camera"
-                        android:layout_width="40dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:width="40dp"
-                        android:height="20dp"
-                        android:contentDescription="Description"
-                        android:paddingLeft="0dp"
-                        android:paddingRight="5dp"
-                        android:scaleType="fitStart"
-                        android:src="@drawable/camera"
-                        tools:layout_editor_absoluteX="0dp"
-                        tools:layout_editor_absoluteY="0dp" />
-                </LinearLayout>
-                <!-- End Post-->
-
-
-                <!-- Item-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="@dimen/nav_header_vertical_spacing">
 
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/profile_picture2"
-                        android:contentDescription="@string/nav_header_desc"
-                        app:srcCompat="@drawable/circle_shape" />
-
+                    android:paddingTop="@dimen/double_general_margin"
+                    android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/profile_details"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        android:paddingTop="0in">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/general_margin"
+                        android:paddingRight="@dimen/general_margin">
 
-                        <TextView
+                        <ImageView
+                            android:id="@+id/profile_picture"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/profile_picture2"
+                            app:srcCompat="@drawable/circle_shape" />
+
+                        <LinearLayout
+                            android:id="@+id/name_and_date"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Rodica Mihaela"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                            android:textSize="12dp" />
+                            android:layout_height="match_parent"
+                            android:gravity="top"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/general_margin">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="10 min ago"
-                            android:textSize="8dp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="abcdef"
+                                android:text="Rodica Mihaela"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="10 min ago"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                        </LinearLayout>
+
                     </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="casual"
+                        android:paddingLeft="@dimen/general_margin"
+                        android:paddingTop="@dimen/half_general_margin"
+                        android:text="Every sunset is an opportunity to reset"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/picture" />
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/activity_horizontal_margin"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:layout_marginTop="0dp"
-                    android:paddingTop="2dp"
-                    android:paddingRight="5dp"
-                    android:text="Every sunset is an opportunity to reset"
-                    android:fontFamily="casual"
-                    android:textFontWeight="@android:integer/config_shortAnimTime"
-                    android:textSize="9.5dp" />
-<!--With every sunset, a new hope is born and an old expectation dies-->
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:width="50dp"
-                    android:contentDescription="Description"
-                    android:maxHeight="30dp"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="0dp"
-                    android:paddingRight="5dp"
-                    android:scaleType="matrix"
-                    android:src="@drawable/picture"
-                    app:layout_editor_absoluteX="0dp"
-                    app:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="0dp"
-                    tools:layout_editor_absoluteY="0dp" />
-                <!-- End Item-->
-
-                <!-- Item-->
                 <LinearLayout
+                    android:paddingTop="@dimen/double_general_margin"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="10dp">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/profile_picture"
-                        android:contentDescription="@string/nav_header_desc"
-                        app:srcCompat="@drawable/circle_shape" />
-
+                    android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/profile_details2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:paddingLeft="5dp">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/general_margin"
+                        android:paddingTop="@dimen/general_margin"
+                        android:paddingRight="@dimen/general_margin">
 
-                        <TextView
+                        <ImageView
+                            android:id="@+id/profile_picture2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/profile_picture"
+                            app:srcCompat="@drawable/circle_shape" />
+
+                        <LinearLayout
+                            android:id="@+id/name_and_date2"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Ayano Tateyama"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                            android:textSize="12dp" />
+                            android:layout_height="match_parent"
+                            android:gravity="top"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/general_margin">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2 days ago"
-                            android:textSize="8dp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Ayano Tateyama"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="2 days ago"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                        </LinearLayout>
+
                     </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="casual"
+                        android:paddingLeft="@dimen/general_margin"
+                        android:paddingTop="@dimen/half_general_margin"
+                        android:text="We don't remember days, we remember moments.."
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/picture2" />
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/activity_horizontal_margin"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:layout_marginTop="0dp"
-                    android:paddingTop="2dp"
-                    android:text="We don't remember days, we remember moments.."
-                    android:fontFamily="casual"
-                    android:textFontWeight="@android:integer/config_shortAnimTime"
-                    android:textSize="9.5dp"  />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:width="50dp"
-                    android:contentDescription="Description"
-                    android:maxHeight="30dp"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="0dp"
-                    android:paddingRight="5dp"
-                    android:paddingBottom="10dp"
-                    android:scaleType="matrix"
-                    android:src="@drawable/picture2"
-                    app:layout_editor_absoluteX="0dp"
-                    app:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="0dp"
-                    tools:layout_editor_absoluteY="0dp" />
-                <!-- End Item-->
 
             </LinearLayout>
+
         </ScrollView>
     </LinearLayout>
 
@@ -211,9 +174,9 @@
         android:layout_marginEnd="0dp"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_max="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHeight_max="10dp"
         app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
