@@ -17,7 +17,7 @@
         android:layout_marginTop="0dp"
         android:isScrollContainer="true"
         android:orientation="vertical"
-        android:paddingBottom="60dp"
+        android:paddingBottom="55dp"
         android:scrollbarAlwaysDrawVerticalTrack="true">
 
         <ScrollView
@@ -190,6 +190,7 @@
                     android:paddingLeft="5dp"
                     android:paddingTop="0dp"
                     android:paddingRight="5dp"
+                    android:paddingBottom="10dp"
                     android:scaleType="matrix"
                     android:src="@drawable/picture2"
                     app:layout_editor_absoluteX="0dp"
